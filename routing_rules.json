@@ -1,0 +1,36 @@
+{
+    "version": 1,
+    "rules": [
+        {
+            "type": "field",
+            "outboundTag": "block",
+            "domain": [
+                "geosite:category-ads-all"
+            ]
+        },
+        {
+            "type": "field",
+            "outboundTag": "direct",
+            "domain": [
+                "geosite:cn",
+                "geosite:private",
+                "geosite:apple",
+                "geosite:microsoft",
+                "geosite:category-games@cn"
+            ]
+        },
+        {
+            "type": "field",
+            "outboundTag": "direct",
+            "ip": [
+                "geoip:cn",
+                "geoip:private"
+            ]
+        },
+        {
+            "type": "field",
+            "outboundTag": "proxy",
+            "network": "tcp,udp"
+        }
+    ]
+}
